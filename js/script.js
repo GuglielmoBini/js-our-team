@@ -61,22 +61,30 @@ const team = [
   },
 ];
 
-let cards = "";
-// creo ciclo per stampare le info
-for (let i = 0; i < team.length; i++) {
-  cards += `<div class="col mb-5">
-  <div class="card">
-    <img
-      class="mb-3"
-      src="img/${team[i].image}"
-      alt="Card-Image"
-    />
-    <div>
-      <h6>${team[i].name}</h6>
-      <p>${team[i].role}</p>
+// creo funzione per creare una card
+const createCard = (image, name, role) => {
+  const card = `<div class="col mb-5">
+    <div class="card">
+      <img
+        class="mb-3"
+        src="img/${image}"
+        alt="Card-Image"
+      />
+      <div>
+        <h6>${name}</h6>
+        <p>${role}</p>
+      </div>
     </div>
-  </div>
-</div>`;
+  </div>`;
+  return card;
+};
+
+//variabile d'appoggio
+let cards = "";
+// creo ciclo per stampare le info nelle card
+for (let i = 0; i < team.length; i++) {
+  const card = createCard(team[i].image, team[i].name, team[i].role);
+  cards += card;
 }
 
 teamCards.innerHTML = cards;
