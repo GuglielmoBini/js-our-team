@@ -60,3 +60,13 @@ const team = [
     image: "barbara-ramos-graphic-designer.jpg",
   },
 ];
+
+// creo ciclo per stampare le info
+for (let i = 0; i < team.length; i++) {
+  console.log("-----NAME-----");
+  console.log(team[i].name);
+  console.log("-----ROLE-----");
+  console.log(team[i].role);
+  console.log("-----IMAGE-----");
+  console.log(team[i].image);
+}
