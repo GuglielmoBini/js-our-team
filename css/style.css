@@ -1,8 +1,7 @@
-.row {
-  min-height: 800px;
+body {
+  background-color: darkgray;
 }
 
-.col {
-  border: 1px solid black;
-  background-color: darkgrey;
+img {
+  display: block;
 }
