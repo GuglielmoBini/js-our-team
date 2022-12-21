@@ -60,14 +60,23 @@ const team = [
     image: "barbara-ramos-graphic-designer.jpg",
   },
 ];
-let result = "";
+
+let cards = "";
 // creo ciclo per stampare le info
 for (let i = 0; i < team.length; i++) {
-  result += `<div class="col">
-  <p>${team[i].image}</p>
-  <h6>${team[i].name}</h6>
-  <p>${team[i].role}</p>
-  </div>`;
+  cards += `<div class="col mb-5">
+  <div class="card">
+    <img
+      class="mb-3"
+      src="img/${team[i].image}"
+      alt="Card-Image"
+    />
+    <div>
+      <h6>${team[i].name}</h6>
+      <p>${team[i].role}</p>
+    </div>
+  </div>
+</div>`;
 }
 
-teamCards.innerHTML = result;
+teamCards.innerHTML = cards;
